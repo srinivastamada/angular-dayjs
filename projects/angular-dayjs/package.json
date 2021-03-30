@@ -1,0 +1,17 @@
+{
+  "name": "angular-dayjs",
+  "version": "0.0.1",
+  "author": {
+    "email": "srinivas.tamada@gmail.com",
+    "name": "Srinivas Tamada",
+    "url": "https://9lessons.info"
+  },
+  "peerDependencies": {
+    "@angular/common": "^11.2.7",
+    "@angular/core": "^11.2.7",
+    "dayjs": "^1.10.4"
+  },
+  "dependencies": {
+    "tslib": "^2.0.0"
+  }
+}

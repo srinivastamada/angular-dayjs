@@ -3,5 +3,46 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-  }
+    "angular-dayjs": {
+      "projectType": "library",
+      "root": "projects/angular-dayjs",
+      "sourceRoot": "projects/angular-dayjs/src",
+      "prefix": "lib",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:ng-packagr",
+          "options": {
+            "tsConfig": "projects/angular-dayjs/tsconfig.lib.json",
+            "project": "projects/angular-dayjs/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "projects/angular-dayjs/tsconfig.lib.prod.json"
+            }
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/angular-dayjs/src/test.ts",
+            "tsConfig": "projects/angular-dayjs/tsconfig.spec.json",
+            "karmaConfig": "projects/angular-dayjs/karma.conf.js"
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "projects/angular-dayjs/tsconfig.lib.json",
+              "projects/angular-dayjs/tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        }
+      }
+    }
+  },
+  "defaultProject": "angular-dayjs"
 }
