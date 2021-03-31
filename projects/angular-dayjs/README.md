@@ -1,24 +1,60 @@
-# AngularDayjs
+# Angular Dayjs
 
-This library was generated with [Angular CLI](https://github.com/angular/angular-cli) version 11.2.7.
+AngularDayjs provider for Angular 11+
 
-## Code scaffolding
+# Demo
+coming soon...
 
-Run `ng generate component component-name --project angular-dayjs` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module --project angular-dayjs`.
-> Note: Don't forget to add `--project angular-dayjs` or else it will be added to the default project in your `angular.json` file. 
 
-## Build
+# Installation
+```
+npm install --save angular-dayjs dayjs
+```
 
-Run `ng build angular-dayjs` to build the project. The build artifacts will be stored in the `dist/` directory.
+or if you use yarn:
 
-## Publishing
+``` typescript
+yarn add angular-dayjs dayjs
+```
 
-After building your library with `ng build angular-dayjs`, go to the dist folder `cd dist/angular-dayjs` and run `npm publish`.
+# Usage
+Import AngularDayjsModule into your app's modules:
+``` typescript
+import { AngularDayjsModule } from 'angular-dayjs';
+ 
+@NgModule({
+  imports: [
+    AngularDayjsModule
+  ]
+})
+```
 
-## Running unit tests
+Import NgxBootstrapConfirmService into your app's components:
 
-Run `ng test angular-dayjs` to execute the unit tests via [Karma](https://karma-runner.github.io).
+``` typescript
+import { Component } from '@angular/core';
+import { AngularDayjsService } from 'angular-dayjs';
 
-## Further help
+@Component({
+  selector: 'app-root',
+  templateUrl: './app.component.html',
+  styleUrls: ['./app.component.scss']
+})
+export class AppComponent {
+  constructor(public angularDayjsService: AngularDayjsService){}
+}
+```
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+#app.component.html
+Unix time stamp
+``` html
+TimeAgo - Date
+<div>angularDayjsService.timeAgo('2020-12-25T23:48:42-05:00')</div>
+<router-outlet></router-outlet>
+```
+
+
+# License
+The MIT License (MIT)
+
+srinivas@9lessons.info

@@ -1,11 +1,13 @@
 {
   "name": "angular-dayjs",
-  "version": "0.0.1",
+  "description": "2KB immutable date time library alternative to Moment.js with the same modern API ",
+  "version": "0.0.4",
   "author": {
     "email": "srinivas.tamada@gmail.com",
     "name": "Srinivas Tamada",
     "url": "https://9lessons.info"
   },
+  "keywords": ["dayjs","date","moment","timeago","angular","angular-module"],
   "peerDependencies": {
     "@angular/common": "^11.2.7",
     "@angular/core": "^11.2.7",
@@ -13,5 +15,11 @@
   },
   "dependencies": {
     "tslib": "^2.0.0"
-  }
+  },
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/srinivastamada/angular-dayjs"
+  },
+  "homepage": "https://www.9lessons.info"
 }
